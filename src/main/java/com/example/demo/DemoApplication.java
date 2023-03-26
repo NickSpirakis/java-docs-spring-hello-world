@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class DemoApplication {
+public class DemoApplication extends HttpServlet{
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
@@ -16,5 +16,13 @@ public class DemoApplication {
 	@RequestMapping("/")
 	String sayHello() {
 		return "Hello Azure!";
+	}
+
+	@Override
+	protected void service(HttpServletRequest req, HttpServletRequest res)
+	throws ServletException, IOException {
+		int num = Integer.parseInt(req.getParameter('num'));
+		PrintWriter out = res.getWriter();
+		out.println("Your number is: " + num);
 	}
 }
