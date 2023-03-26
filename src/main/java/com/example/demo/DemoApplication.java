@@ -7,12 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class DemoApplication extends HttpServlet{
+public class DemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
-
-
 
 	}
 
@@ -21,7 +19,13 @@ public class DemoApplication extends HttpServlet{
 
 		return "Hello Azure!";
 	}
+
+}
+
 '''
+
+ extends HttpServlet
+ 
 	@RequestMapping("/num")
 		int num = Integer.parseInt(req.getParameter('num'));
 		
@@ -36,4 +40,3 @@ public class DemoApplication extends HttpServlet{
 			return "number is: " + num;
 		}
 '''
-}
