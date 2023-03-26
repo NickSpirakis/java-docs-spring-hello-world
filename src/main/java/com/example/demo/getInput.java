@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class getInput {
+public class getInput extends HttpServlet{
 
 	protected void service(HttpServletRequest req, HttpServletResponse res)
 	throws ServletException, IOException {
