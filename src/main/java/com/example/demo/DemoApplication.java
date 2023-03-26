@@ -24,13 +24,13 @@ public class DemoApplication extends HttpServlet{
 		SpringApplication.run(DemoApplication.class, args);
 
 	}
-
+'''
 	@RequestMapping("/")
 	String sayHello() {
 
 		return "Hello Azure!";
 	}
-
+'''
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse res)
 	 throws ServletException, IOException {
