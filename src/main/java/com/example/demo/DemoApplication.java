@@ -27,14 +27,7 @@ public class DemoApplication {
 
 		return "Hello Azure!";
 	}
-'''
-	@RequestMapping(value="/getNum", method=RequestMethod.GET)
-	public String getNum(@RequestParam(value="num") String num) {
-		PrintWriter out = res.getWriter();
-		out.println("Your number is: " + num);
-		//return "Hello Azure!";
-	}
-'''
+
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse res)
 	 throws ServletException, IOException {
@@ -42,11 +35,5 @@ public class DemoApplication {
 		PrintWriter out = res.getWriter();
 		out.println("Your number is: " + num);
 	}
-	'''
-	@RequestMapping(value="/getNum", method=RequestMethod.GET)
-	public String getNum(Model model, @RequestParam(value="num") String num) {
-		model.addAttribute("Number", num);
-		return "Hello Azure!";
-	}
-	'''
+	
 }
