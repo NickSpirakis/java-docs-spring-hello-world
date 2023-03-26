@@ -18,7 +18,7 @@ import java.io.IOException;
 
 @SpringBootApplication
 @RestController
-public class DemoApplication {
+public class DemoApplication extends HttpServlet{
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
