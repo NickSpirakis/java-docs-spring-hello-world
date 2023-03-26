@@ -21,10 +21,19 @@ public class DemoApplication extends HttpServlet{
 
 		return "Hello Azure!";
 	}
-
+'''
 	@RequestMapping("/num")
 		int num = Integer.parseInt(req.getParameter('num'));
 		
 		System.out.println("Your number is: " + num);
 	}
+'''
+
+	@RequestMapping(value = "/{num}", method = RequestMethod.GET)
+		public String showNumber(@PathVariable("num") String num, Model model)
+		{ 
+			model.addAttribute("num", num); 
+			return "number is: " + num;
+		}
+
 }
