@@ -24,13 +24,5 @@ public class DemoApplication extends HttpServlet{
 		
 		SpringApplication.run(DemoApplication.class, args);
 
-		@Override
-		protected void service(HttpServletRequest req, HttpServletResponse res)
-	 	throws ServletException, IOException {
-			int num = Integer.parseInt(req.getParameter("num"));
-			PrintWriter out = res.getWriter();
-			out.println("Your number is: " + num);
-		}
-	}
-	
+	}	
 }
