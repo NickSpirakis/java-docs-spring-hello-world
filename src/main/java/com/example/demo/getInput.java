@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class getInput {
 
-    @Override
 	protected void service(HttpServletRequest req, HttpServletResponse res)
 	throws ServletException, IOException {
 		int num = Integer.parseInt(req.getParameter("num"));
