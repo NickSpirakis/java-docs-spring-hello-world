@@ -21,6 +21,8 @@ import java.io.IOException;
 public class DemoApplication extends HttpServlet{
 
 	public static void main(String[] args) {
+		
+		SpringApplication.run(DemoApplication.class, args);
 
 		@Override
 		protected void service(HttpServletRequest req, HttpServletResponse res)
