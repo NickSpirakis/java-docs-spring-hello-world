@@ -28,12 +28,12 @@ public class DemoApplication extends HttpServlet{
 		System.out.println("Your number is: " + num);
 	}
 '''
-
+'''
 	@RequestMapping(value = "/{num}", method = RequestMethod.GET)
 		public String showNumber(@PathVariable("num") String num, Model model)
 		{ 
 			model.addAttribute("num", num); 
 			return "number is: " + num;
 		}
-
+'''
 }
