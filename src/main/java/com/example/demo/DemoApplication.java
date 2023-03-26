@@ -24,7 +24,7 @@ public class DemoApplication {
 	}
 
 	@RequestMapping(value="/getNum", method=RequestMethod.GET)
-	Public String getNum(Model model, @RequestParam(value="num") String num) {
+	public String getNum(Model model, @RequestParam(value="num") String num) {
 		model.addAttribute("Number", num);
 		return "Hello Azure!";
 	}
