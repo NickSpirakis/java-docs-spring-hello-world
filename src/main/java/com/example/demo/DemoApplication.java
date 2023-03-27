@@ -22,7 +22,12 @@ public class DemoApplication extends HttpServlet{
 
 	public static void main(String[] args) {
 		
-		SpringApplication.run(getInput.class, args);
+		SpringApplication.run(DemoApplication.class, args);
 
 	}	
+
+	@RequestMapping("/test")
+	String sayHello() {
+    	return "Test!";
+}
 }
